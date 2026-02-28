@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://postgres:uHLwUsyuJllkuXNIkxCtuAhWSTvkKWhz@postgres.railway.internal:5432/railway"
 }
 
 model Contact {
@@ -12,7 +12,7 @@ model Contact {
   phoneNumber    String?
   email          String?
   linkedId       Int?
-  linkPrecedence String    // "primary" | "secondary"
+  linkPrecedence String
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
   deletedAt      DateTime?
