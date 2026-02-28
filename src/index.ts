@@ -1,3 +1,5 @@
+process.env.DATABASE_URL = process.env.DATABASE_URL || "postgresql://postgres:uHLwUsyuJllkuXNIkxCtuAhWSTvkKWhz@postgres.railway.internal:5432/railway";
+
 import app from "./app";
 import { prisma } from "./identifyService";
 
